@@ -1,0 +1,55 @@
+<!-- <p>document-upload works!</p>
+<div class="toolbar" role="banner">
+  <button class="nav-item nav-link-edit" (click)="goToDoc()">home</button>
+</div> -->
+<mat-tab-group mat-stretch-tabs animationDuration="0ms">
+  <mat-tab class="tab-style" label="Claim Status">
+    <div class="list-container">
+      <div class="cards-container" *ngFor="let item of countryList">
+        <mat-card class="card-style">
+          <div>
+            <span class="content-style">
+              <label class="label-style">Patient Name </label>
+              <label>
+                {{ item.patient_name }}
+              </label>
+            </span>
+            <span class="content-style">
+              <label class="label-style">Client Number </label>
+              <label>
+                {{ item.claim_number }}
+              </label>
+            </span>
+            <span class="content-style">
+              <label class="label-style">Date Submitted </label>
+              <label>
+                {{ item.date_submitted }}
+              </label>
+            </span>
+            <span class="content-style">
+              <label class="label-style">Documents Status </label>
+              <span class="status-container">
+                <img
+                  class="sts-img-style"
+                  src="../../assets/img/{{ item.status_img }}.png"
+                  height="14px"
+                  width="14px"
+                />
+                <label class="status-padding">
+                  {{ item.document_status }}
+                </label>
+              </span>
+            </span>
+            <img
+              class="img-style"
+              src="../../assets/img/arrow.png"
+              height="30px"
+              width="30px"
+            />
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Documents Received">Documents Content</mat-tab>
+</mat-tab-group>

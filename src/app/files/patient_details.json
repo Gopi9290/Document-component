@@ -1,0 +1,23 @@
+[
+  {
+    "patient_name": "John",
+    "claim_number": "2122",
+    "date_submitted": "11/12/2019",
+    "document_status": "Completed",
+    "status_img": "completed"
+  },
+  {
+    "patient_name": "Smith",
+    "claim_number": "4121",
+    "date_submitted": "11/12/2019",
+    "document_status": "Additional Info Required",
+    "status_img": "required"
+  },
+  {
+    "patient_name": "David",
+    "claim_number": "1121",
+    "date_submitted": "11/12/2019",
+    "document_status": "Not received",
+    "status_img": "notreceived"
+  }
+]
