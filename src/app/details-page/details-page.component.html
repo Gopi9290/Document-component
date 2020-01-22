@@ -16,14 +16,27 @@
       </div>
       <div class="row">
         <div class="col-7">
-          <label>
+          <label *ngIf="!isFileAdd">
             Certificates
           </label>
+          <input
+            *ngIf="isFileAdd"
+            type="file"
+            (change)="fileChange($event)"
+            placeholder="Upload file"
+            accept=".pdf,.doc,.docx"
+          />
         </div>
         <div class="col-5 btn-container">
-          <button class="add-btn">Add Files</button>
+          <button class="add-btn" *ngIf="!isFileAdd" (click)="addFiles()">
+            Add Files
+          </button>
+          <button class="add-btn" *ngIf="isFileAdd" (click)="saveFile()">
+            Save File
+          </button>
         </div>
       </div>
+
       <div class="cert-container">
         <div *ngIf="!selectedPatient.certficates_list.length">
           <label class="pending-label">
@@ -37,8 +50,11 @@
           <div class="row cert-item">
             <div class="col-7 cert-label">
               <div>
-                <label class="cert-name">
+                <!-- <label class="cert-name">
                   {{ certificate.id }}.{{ certificate.name }}
+                </label> -->
+                <label class="cert-name">
+                  {{ certificate.name }}
                 </label>
                 <label class="cert-size">
                   {{ certificate.size }}
@@ -46,7 +62,10 @@
               </div>
             </div>
             <div class="col-5 btn-container">
-              <button class="delete-btn">
+              <button
+                class="delete-btn"
+                (click)="deleteCertificate(certificate)"
+              >
                 <img
                   class="img-style"
                   src="../../assets/img/crossmark.png"
@@ -61,12 +80,24 @@
       </div>
       <div class="row">
         <div class="col-7">
-          <label>
+          <label *ngIf="!isReportAdd">
             Medical Reports
           </label>
+          <input
+            *ngIf="isReportAdd"
+            type="file"
+            (change)="reportChange($event)"
+            placeholder="Upload file"
+            accept=".pdf,.doc,.docx"
+          />
         </div>
         <div class="col-5 btn-container">
-          <button class="add-btn">Add Files</button>
+          <button class="add-btn" *ngIf="!isReportAdd" (click)="addReport()">
+            Add Files
+          </button>
+          <button class="add-btn" *ngIf="isReportAdd" (click)="saveReport()">
+            Save File
+          </button>
         </div>
       </div>
       <div class="reports-container">
@@ -82,8 +113,11 @@
           <div class="row cert-item">
             <div class="col-7 cert-label">
               <div>
-                <label class="cert-name">
+                <!-- <label class="cert-name">
                   {{ certificate.id }}.{{ certificate.name }}
+                </label> -->
+                <label class="cert-name">
+                  {{ certificate.name }}
                 </label>
                 <label class="cert-size">
                   {{ certificate.size }}
@@ -91,7 +125,7 @@
               </div>
             </div>
             <div class="col-5 btn-container">
-              <button class="delete-btn">
+              <button class="delete-btn" (click)="deleteReport(certificate)">
                 <img
                   class="img-style"
                   src="../../assets/img/crossmark.png"

@@ -4,8 +4,7 @@
     "patient_name": "John",
     "claim_number": "2122",
     "date_submitted": "11/12/2019",
-    "document_status": "Completed",
-    "status_img": "completed",
+    "document_status": "completed",
     "certficates_list": [
       { "id": 1, "name": "Certificate1.pdf", "size": "2MB" },
       { "id": 2, "name": "Certificate2.pdf", "size": "4MB" },
@@ -18,8 +17,7 @@
     "patient_name": "Smith",
     "claim_number": "4121",
     "date_submitted": "11/12/2019",
-    "document_status": "Additional Info Required",
-    "status_img": "required",
+    "document_status": "required",
     "certficates_list": [],
     "reports_list": [{ "id": 1, "name": "Report1.pdf", "size": "2MB" }]
   },
@@ -28,8 +26,7 @@
     "patient_name": "David",
     "claim_number": "1121",
     "date_submitted": "11/12/2019",
-    "document_status": "Not received",
-    "status_img": "notreceived",
+    "document_status": "notreceived",
     "certficates_list": [],
     "reports_list": []
   }

@@ -31,12 +31,27 @@
               <span class="status-container">
                 <img
                   class="sts-img-style"
-                  src="../../assets/img/{{ item.status_img }}.png"
+                  src="../../assets/img/{{ item.document_status }}.png"
                   height="14px"
                   width="14px"
                 />
-                <label class="status-padding">
-                  {{ item.document_status }}
+                <label
+                  class="status-padding"
+                  *ngIf="item.document_status === 'completed'"
+                >
+                  Completed
+                </label>
+                <label
+                  class="status-padding "
+                  *ngIf="item.document_status === 'required'"
+                >
+                  Additional Info Required
+                </label>
+                <label
+                  class="status-padding"
+                  *ngIf="item.document_status === 'notreceived'"
+                >
+                  Not received
                 </label>
               </span>
             </span>
