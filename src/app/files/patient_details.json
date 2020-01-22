@@ -1,23 +1,36 @@
 [
   {
+    "id": 1,
     "patient_name": "John",
     "claim_number": "2122",
     "date_submitted": "11/12/2019",
     "document_status": "Completed",
-    "status_img": "completed"
+    "status_img": "completed",
+    "certficates_list": [
+      { "id": 1, "name": "Certificate1.pdf", "size": "2MB" },
+      { "id": 2, "name": "Certificate2.pdf", "size": "4MB" },
+      { "id": 3, "name": "Certificate3.pdf", "size": "5MB" }
+    ],
+    "reports_list": []
   },
   {
+    "id": 2,
     "patient_name": "Smith",
     "claim_number": "4121",
     "date_submitted": "11/12/2019",
     "document_status": "Additional Info Required",
-    "status_img": "required"
+    "status_img": "required",
+    "certficates_list": [],
+    "reports_list": [{ "id": 1, "name": "Report1.pdf", "size": "2MB" }]
   },
   {
+    "id": 3,
     "patient_name": "David",
     "claim_number": "1121",
     "date_submitted": "11/12/2019",
     "document_status": "Not received",
-    "status_img": "notreceived"
+    "status_img": "notreceived",
+    "certficates_list": [],
+    "reports_list": []
   }
 ]

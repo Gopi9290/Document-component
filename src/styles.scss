@@ -8,6 +8,7 @@ body {
   --card-color: #f6f4f4;
   --border-color: lightgray;
 }
+@import "~bootstrap/dist/css/bootstrap.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body {
   margin: 0;

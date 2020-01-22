@@ -9,7 +9,7 @@ const routes: Routes = [];
   imports: [
     RouterModule.forRoot([
       {
-        path: "doc-cmp",
+        path: "doc-cmp/:id",
         component: DocumentUploadComponent
       },
       {

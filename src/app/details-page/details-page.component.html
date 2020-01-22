@@ -1,1 +1,110 @@
-<p>details-page works!</p>
+<!-- <p>document-upload works!</p>
+<div class="toolbar" role="banner">
+  <button class="nav-item nav-link-edit" (click)="goToDoc()">home</button>
+</div> -->
+<mat-tab-group mat-stretch-tabs animationDuration="0ms">
+  <mat-tab class="tab-style" label="Claim Status">
+    <div class="list-container">
+      <div class="back-button" (click)="goBack()">
+        <img
+          class="img-style"
+          src="../../assets/img/left-arrow.png"
+          height="15px"
+          width="15px"
+        />
+        <label class="back-text">Back</label>
+      </div>
+      <div class="row">
+        <div class="col-7">
+          <label>
+            Certificates
+          </label>
+        </div>
+        <div class="col-5 btn-container">
+          <button class="add-btn">Add Files</button>
+        </div>
+      </div>
+      <div class="cert-container">
+        <div *ngIf="!selectedPatient.certficates_list.length">
+          <label class="pending-label">
+            Files are pending, please add
+          </label>
+        </div>
+        <div
+          class="certificates-list"
+          *ngFor="let certificate of selectedPatient.certficates_list"
+        >
+          <div class="row cert-item">
+            <div class="col-7 cert-label">
+              <div>
+                <label class="cert-name">
+                  {{ certificate.id }}.{{ certificate.name }}
+                </label>
+                <label class="cert-size">
+                  {{ certificate.size }}
+                </label>
+              </div>
+            </div>
+            <div class="col-5 btn-container">
+              <button class="delete-btn">
+                <img
+                  class="img-style"
+                  src="../../assets/img/crossmark.png"
+                  height="12px"
+                  width="12px"
+                />
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-7">
+          <label>
+            Medical Reports
+          </label>
+        </div>
+        <div class="col-5 btn-container">
+          <button class="add-btn">Add Files</button>
+        </div>
+      </div>
+      <div class="reports-container">
+        <div *ngIf="!selectedPatient.reports_list.length">
+          <label class="pending-label">
+            Files are pending, please add
+          </label>
+        </div>
+        <div
+          class="certificates-list"
+          *ngFor="let certificate of selectedPatient.reports_list"
+        >
+          <div class="row cert-item">
+            <div class="col-7 cert-label">
+              <div>
+                <label class="cert-name">
+                  {{ certificate.id }}.{{ certificate.name }}
+                </label>
+                <label class="cert-size">
+                  {{ certificate.size }}
+                </label>
+              </div>
+            </div>
+            <div class="col-5 btn-container">
+              <button class="delete-btn">
+                <img
+                  class="img-style"
+                  src="../../assets/img/crossmark.png"
+                  height="12px"
+                  width="12px"
+                />
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Documents Received">Documents Content</mat-tab>
+</mat-tab-group>

@@ -6,7 +6,7 @@
   <mat-tab class="tab-style" label="Claim Status">
     <div class="list-container">
       <div class="cards-container" *ngFor="let item of countryList">
-        <mat-card class="card-style">
+        <mat-card class="card-style" (click)="openDetails(item.id)">
           <div>
             <span class="content-style">
               <label class="label-style">Patient Name </label>

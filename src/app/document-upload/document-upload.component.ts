@@ -20,7 +20,8 @@ export class DocumentUploadComponent implements OnInit {
 
   ngOnInit() {}
 
-  goToDoc = function() {
-    this.router.navigateByUrl("/details-cmp");
+  openDetails = function(item) {
+    this.router.navigate(["/details-cmp", { id: item }]);
+    //this.router.navigate(["/details-cmp"]);
   };
 }
